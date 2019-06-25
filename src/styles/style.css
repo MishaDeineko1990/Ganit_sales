@@ -14,6 +14,7 @@ ul
 a
 	{
 		text-decoration: none;
+
 	}
 
 
@@ -533,33 +534,52 @@ body .open_menu_navigation
 /*overlay*/
 
 
-.overlay{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: rgba(49, 85, 103, 0.9);
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
+.overlay
+	{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(49, 85, 103, 0.9);
+		z-index: 1;
+		display: flex;
+  		flex-direction: column;
+	}
 
-.image_wrap{
-	flex: 6;
-}
+.image_wrap
+	{
+		flex: 6;
+	}
 
-.left_sector, .right_sector{
-	flex: 1;
-}
+.left_sector, .right_sector
+	{
+		flex: 1;
+	}
 
+.top_sector, .bottom_sector
+	{
+		flex: 1;
+	}
 
-.image_wrap img{
-	width: 100%;
-}
+.center_sector
+	{
+		flex: 7;
+	}
+
+.top_sector, .center_sector, .bottom_sector
+	{		
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+.image_wrap img
+	{
+		width: 100%;
+	}
 /*end overlay*/
 
 
