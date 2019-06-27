@@ -576,6 +576,16 @@ body .open_menu_navigation
 		align-items: center;
 	}
 
+.close_overlay
+	{
+		width: 30px;
+        position: absolute;
+        right: 5px;
+		top: 5px;
+        border: solid red 1px;
+        float:right;
+	}
+
 .image_wrap img
 	{
 		width: 100%;
