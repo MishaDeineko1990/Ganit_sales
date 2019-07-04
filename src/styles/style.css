@@ -11,18 +11,15 @@ ul {
 
 a {
     text-decoration: none;
-
+     color: white;
 }
-
-
 
 body {
     background: #fafafa;
     width: 100%;
 }
 
-@font-face \
- {
+@font-face  {
     font-family: 'Segoe UI Light';
     src: url('SegoeUI-Light.eot');
     src: url('SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
@@ -32,22 +29,21 @@ body {
     font-style: normal;
 }
 
-
 .parallax-window {
     min-height: 400px;
     background: transparent;
 }
 
-
-
-
-
-
-
 .wrapper_for_oll_page {
     width: 99%;
     margin: 0 auto;
 }
+.title,
+.text {
+    font-family: 'Segoe UI Light';
+}
+
+
 
 
 
@@ -68,22 +64,18 @@ body {
 /*top menu start*/
 
 .top_menu {
-    background: rgba(254, 254, 254, 0.91);
+    background: rgba(254, 254, 254, 1);
     width: 100%;
     height: 70px;
     position: fixed;
     border-bottom: solid #e6e6e6 1px;
 }
-
 .wrap_top_menu {
     position: relative;
     z-index: 1;
 }
 
-.top_menu a img
-
-/*css styles for logo*/
-    {
+.top_menu a img {
     height: 50px;
     margin: 10px;
 }
@@ -139,16 +131,6 @@ body {
 }
 
 
-
-
-body .open_menu_navigation {
-    right: -600px;
-    transition: all 1s;
-}
-
-
-
-
 /*css for button menu*/
 .line_button_menu {
     width: 50%;
@@ -161,9 +143,6 @@ body .open_menu_navigation {
     margin-top: 15px;
     margin-left: auto;
 }
-
-/*end css for button menu*/
-/*top menu end*/
 
 
 
@@ -182,40 +161,18 @@ body .open_menu_navigation {
     background-size: cover;
 }
 
-/*end top banner*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*top banner*/
 .top_banner_for_about_us {
     /*height: 100vh;
 		background: url(../images/top_baner/about_us.jpg) center no-repeat;
 		background-size: cover;*/
 }
 
-/*end top banner*/
 
-.title,
-.text {
-    font-family: 'Segoe UI Light';
-}
+
+
+
+
+
 
 
 
@@ -238,7 +195,6 @@ body .open_menu_navigation {
     color: white;
 
 }
-
 .Welkome {
     margin: 20px 20px 20px 10px;
     width: 100px;
@@ -282,7 +238,6 @@ body .open_menu_navigation {
 
 
 
-/*end navigation menu*/
 
 
 
@@ -293,24 +248,13 @@ body .open_menu_navigation {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*probel box*/
+/*different parts*/
 .probel_box {
     width: 100%;
     height: 110px;
     content: "";
 }
 
-/*end probel box*/
 
 
 
@@ -325,12 +269,7 @@ body .open_menu_navigation {
 
 
 
-
-
-
-/*css for small content box*/
-
-
+/*small conteiner*/
 .wrapper_for_content_box {
     display: flex;
     flex-wrap: wrap;
@@ -352,7 +291,9 @@ body .open_menu_navigation {
     z-index: -1;
 }
 
-.photo_small_content {}
+.photo_small_content {
+
+}
 
 .small_content :hover {
     cursor: pointer;
@@ -390,7 +331,6 @@ body .open_menu_navigation {
     position: relative;
 }
 
-/*end css for small content box*/
 
 
 
@@ -408,20 +348,6 @@ body .open_menu_navigation {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*css for content box*/
 .wrapper_for_content_box {
     width: 70%;
     border-radius: 2%;
@@ -429,28 +355,11 @@ body .open_menu_navigation {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .content_box {
     background-color: white;
     border: solid #e6e6e6 1px;
+    overflow: hidden;
 }
-
-
-
-
-
 
 .small_logo {
     height: 60px;
@@ -475,23 +384,58 @@ body .open_menu_navigation {
     float: left;
 }
 
-
-
-
-
-
-
 .wraper_content_img img {
     width: 100%;
     margin: 0 auto;
 }
 
+.content_bottom_description {
+    height: 60px;
+    width: 100%;
+    float: left;
+    background: white;
+}
 
+.wrapper_for_content_box {
+    width: 70%;
+    border-radius: 2%;
+    transition: all 1s;
 
+}
 
+.content_box {
+    background-color: white;
+    border: solid #e6e6e6 1px;
+    overflow: hidden;
+}
 
+.small_logo {
+    height: 60px;
+    width: 60px;
+}
 
+.content_top_discription .text_wrapper {
+    width: 400px;
+    height: 10px;
+    padding: 10px 0 0 30px;
+    margin: -50px 0 0 40px;
+}
 
+.small_logo img {
+    height: 59px;
+    width: 59px;
+    border-radius: 50%;
+}
+
+.content_top_discription {
+    height: 60px;
+    float: left;
+}
+
+.wraper_content_img img {
+    width: 100%;
+    margin: 0 auto;
+}
 
 .content_bottom_description {
     height: 60px;
@@ -510,9 +454,12 @@ body .open_menu_navigation {
 
 
 
+
+
+
+
+
 /*overlay*/
-
-
 .overlay {
     width: 100%;
     height: 100%;
@@ -567,10 +514,14 @@ body .open_menu_navigation {
     width: 100%;
 }
 
-/*end overlay*/
 
 
-/*end css for content box*/
+
+
+
+
+
+
 
 
 
@@ -582,34 +533,88 @@ body .open_menu_navigation {
 
 /*adaptation*/
 @media screen and (max-width: 1125px) {
+
+
+    body{
+        width: 100%;
+        justify-content: center;
+    }
+
+
+
+    .top_menu {
+        max-width: 100%;
+    }
+
+    .top_menu a {
+        max-width: 20%;
+    }
+
+    .big_logo {
+        width: 30%;
+    }
+    .button_menu {
+        width: 40px;
+        height: 40px;
+        margin: 10px 20px 10px 10px;
+        right: 0px;
+        top: 0;
+        position: absolute;
+        cursor: pointer;
+        
+    }
+
+    .close_button_menu {
+        width: 30px;
+        height: 30px;
+        margin: 17px 0px 10px 10px;
+        right: 0px;
+        top: 0;
+        position: absolute;
+        cursor: pointer;
+        padding: 10px;
+        display: none;
+    }
+.position_button_menu { 
+    margin: 10px 10px 10px 10px;
+   }
+
+
+
+
+
+
+
     .wrapper_for_content_box {
         width: 100%;
-        border: solid red 1px;
     }
 
     .menu_navigation {
-        width: 30%;
-        right: -600px;
+        width: 98%;
+        right: -1000px;
     }
 
     .wrapper_for_oll_page {
+        width: 99%;
+        justify-content: center;
+    }
+    .top_banner{
         width: 100%;
     }
 }
 
 @media screen and (max-width: 1025px) {
-    .wrapper_for_content_box {
-        width: 105%;
-    }
+
 }
 
 @media screen and (max-width: 769px) {
-    .wrapper_for_content_box {
-        width: 100%;
-    }
+  
 
 }
 
 
 
-/*end adaptation*/
+
+
+
+

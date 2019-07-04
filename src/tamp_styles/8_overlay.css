@@ -1,0 +1,71 @@
+/*overlay*/
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(49, 85, 103, 0.9);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.image_wrap {
+    flex: 6;
+}
+
+.left_sector,
+.right_sector {
+    flex: 1;
+}
+
+.top_sector,
+.bottom_sector {
+    flex: 1;
+}
+
+.center_sector {
+    flex: 7;
+}
+
+.top_sector,
+.center_sector,
+.bottom_sector {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.close_overlay {
+    width: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: solid red 1px;
+    float: right;
+}
+
+.image_wrap img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

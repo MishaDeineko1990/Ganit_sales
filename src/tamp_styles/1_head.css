@@ -1,0 +1,62 @@
+/*for oll page*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+     color: white;
+}
+
+body {
+    background: #fafafa;
+    width: 100%;
+}
+
+@font-face  {
+    font-family: 'Segoe UI Light';
+    src: url('SegoeUI-Light.eot');
+    src: url('SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
+        url('SegoeUI-Light.woff') format('woff'),
+        url('SegoeUI-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+.wrapper_for_oll_page {
+    width: 99%;
+    margin: 0 auto;
+}
+.title,
+.text {
+    font-family: 'Segoe UI Light';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
