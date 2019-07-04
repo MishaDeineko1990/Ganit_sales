@@ -1,8 +1,9 @@
-const gulp = require('gulp')
+const gulp = require('gulp');
 const concat = require('gulp-concat')
-const autoprefixer = require('gulp-autoprefixer')
-let cleanCSS = require('gulp-clean-css')
-let uglify =require('gulp-uglify')
+const autoprefixer = require('gulp-autoprefixer');
+let cleanCSS = require('gulp-clean-css');
+let uglify =require('gulp-uglify');
+var browserSync = require('browser-sync').create();
 
 const css_files = [
 	'./src/tamp_styles/1_head.css',
@@ -60,6 +61,14 @@ function scripts(){
 
 //вигрузка файлу
 	.pipe(gulp.dest('./src/script')) 
+}
+
+function watch(){
+	 browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 }
 
 //task for get function styles
