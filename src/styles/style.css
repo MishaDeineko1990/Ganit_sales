@@ -190,6 +190,7 @@ body {
     top: 77px;
     padding: 10px;
     height: 1000px;
+    -webkit-transition: all 1s;
     transition: all 1s;
     background-color: rgba(3, 3, 3, 0.6);
     color: white;
@@ -271,9 +272,16 @@ body {
 
 /*small conteiner*/
 .wrapper_for_content_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -306,6 +314,8 @@ body {
 
 .hart {
     display: none;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
@@ -351,6 +361,7 @@ body {
 .wrapper_for_content_box {
     width: 70%;
     border-radius: 2%;
+    -webkit-transition: all 1s;
     transition: all 1s;
 
 }
@@ -399,6 +410,7 @@ body {
 .wrapper_for_content_box {
     width: 70%;
     border-radius: 2%;
+    -webkit-transition: all 1s;
     transition: all 1s;
 
 }
@@ -469,35 +481,57 @@ body {
     left: 0;
     background-color: rgba(49, 85, 103, 0.9);
     z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     display: none;
 }
 
 .image_wrap {
+    -webkit-box-flex: 6;
+    -ms-flex: 6;
     flex: 6;
 }
 
 .left_sector,
 .right_sector {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
 .top_sector,
 .bottom_sector {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
 .center_sector {
+    -webkit-box-flex: 7;
+    -ms-flex: 7;
     flex: 7;
 }
 
 .top_sector,
 .center_sector,
 .bottom_sector {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -537,6 +571,8 @@ body {
 
     body{
         width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
@@ -596,6 +632,8 @@ body {
 
     .wrapper_for_oll_page {
         width: 99%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .top_banner{
@@ -611,6 +649,15 @@ body {
   
 
 }
+
+
+
+
+
+
+
+
+
 
 
 

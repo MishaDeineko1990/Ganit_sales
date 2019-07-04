@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
 
 const css_files = [
 	'./src/tamp_styles/1_head.css',
@@ -19,10 +20,18 @@ const css_files = [
 
  	.pipe(concat('style.css'))
 
- 	.pipe(gulp.dest('./src/styles')) 
+ 	.pipe(autoprefixer({
+		browsers: ['last 2 versions'],
+		cascade: false
+	}))
+	.pipe(gulp.dest('./src/styles')) 
+
  }
 
+ 
 
+
+//task for styles scripts 
 function scripts(){
 
 

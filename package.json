@@ -7,7 +7,10 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
