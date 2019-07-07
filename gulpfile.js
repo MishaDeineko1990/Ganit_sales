@@ -1,11 +1,14 @@
+//Подключаем модули галпа
 const gulp = require('gulp');
-const concat = require('gulp-concat')
+const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
-let cleanCSS = require('gulp-clean-css');
-let uglify =require('gulp-uglify');
-var browserSync = require('browser-sync').create();
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const del = require('del');
+const browserSync = require('browser-sync').create();
 
-const css_files = [
+//Порядок подключения css файлов
+const cssFiles = [
 	'./src/tamp_styles/1_head.css',
 	'./src/tamp_styles/2_top_menu.css',
 	'./src/tamp_styles/3_top_banner.css',
@@ -14,9 +17,9 @@ const css_files = [
 	'./src/tamp_styles/6_small_content_box.css',
 	'./src/tamp_styles/7_content_box.css',
 	'./src/tamp_styles/8_overlay.css',
-	'./src/tamp_styles/999_adaptation.css'	
+	'./src/tamp_styles/999_adaptation.css'
 ]
-
+//Порядок подключения js файлов
 const jsFiles = [
 	'./src/tamp_script/1_start.js',
 	'./src/tamp_script/2_work_from_languige.js',
@@ -26,53 +29,75 @@ const jsFiles = [
 	'./src/tamp_script/999_finish.js'	
 ]
 
-
-//task for styles css 
- function styles() {
- 	return gulp.src(css_files)
-
- 	.pipe(concat('style.css'))
-
- 	.pipe(autoprefixer({
-		browsers: ['last 2 versions'],
-		cascade: false
-	}))
-
-	.pipe(cleanCSS({compatibility: 'ie8'}))
-
-//вигрузка файлу
-	.pipe(gulp.dest('./src/styles')) 
-
- }
-
- 
-
-
-//task for styles scripts 
-function scripts(){
-
-	return gulp.src(jsFiles)
-
- 	.pipe(concat('js.js'))
-
- 	.pipe(uglify({
- 		toplevel: true
- 	}))
-
-//вигрузка файлу
-	.pipe(gulp.dest('./src/script')) 
+//Таск на стили CSS
+function styles() {
+   //Шаблон для поиска файлов CSS
+   //Всей файлы по шаблону './src/css/**/*.css'
+   return gulp.src(cssFiles)
+   //Объединение файлов в один
+   .pipe(concat('style.css'))
+   //Добавить префиксы
+   .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+   }))
+   //Минификация CSS
+   .pipe(cleanCSS({
+      level: 2
+   }))
+   //Выходная папка для стилей
+   .pipe(gulp.dest('./src/styles'))
+   .pipe(browserSync.stream());
 }
 
-function watch(){
-	 browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+//Таск на скрипты JS
+function scripts() {
+   //Шаблон для поиска файлов JS
+   //Всей файлы по шаблону './src/js/**/*.js'
+   return gulp.src(jsFiles)
+   //Объединение файлов в один
+   .pipe(concat('script.js'))
+   //Минификация JS
+   .pipe(uglify({
+      toplevel: true
+   }))
+   //Выходная папка для скриптов
+   .pipe(gulp.dest('./src/script'))
+   .pipe(browserSync.stream());
 }
 
-//task for get function styles
+//Удалить всё в указанной папке
+function clean() {
+   return del(['busket/*'])
+}
+
+//Просматривать файлы
+function watch() {
+   browserSync.init({
+      server: {
+          baseDir: "./"
+      }
+  });
+
+  //Следить за CSS файлами
+  gulp.watch('./src/tamp_styles/*.css', styles)
+  //Следить за JS файлами
+  gulp.watch('./src/tamp_script/*.js', scripts)
+  //При изменении HTML запустить синхронизацию
+  gulp.watch("./*.html").on('change', browserSync.reload);
+
+
+}
+
+//Таск вызывающий функцию styles
 gulp.task('styles', styles);
-
-//task for get function scripts
+//Таск вызывающий функцию scripts
 gulp.task('scripts', scripts);
+//Таск для очистки папки build
+gulp.task('del', clean);
+//Таск для отслеживания изменений
+gulp.task('watch', watch);
+//Таск для удаления файлов в папке build и запуск styles и scripts
+gulp.task('build', gulp.series(clean, gulp.parallel(styles,scripts)));
+//Таск запускает таск build и watch последовательно
+gulp.task('dev', gulp.series('build','watch'));

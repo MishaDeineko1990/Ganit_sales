@@ -16,7 +16,7 @@ a {
 
 body {
     background: #fafafa;
-    width: 100%;
+    width: 100%; 
 }
 
 @font-face  {
@@ -30,7 +30,7 @@ body {
 }
 
 .parallax-window {
-    min-height: 400px;
+    min-height: 600px;
     background: transparent;
 }
 

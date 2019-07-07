@@ -57,7 +57,7 @@
     }
 
     .menu_navigation {
-        width: 98%;
+        width: 68%;
         right: -1000px;
     }
 
@@ -79,6 +79,33 @@
 
 }
 
+
+@media screen and (max-width: 365px) {
+ 
+    .small_content {
+        max-width: 155px;
+        margin-left: 2px;
+    }
+
+    .wrapper_for_content_box {
+        overflow: hidden;
+    }
+
+}
+
+
+@media screen and (max-width: 325px) {
+ 
+    .small_content {
+        max-width: 145px;
+        margin-left: 2px;
+    }
+
+    .wrapper_for_content_box {
+        overflow: hidden;
+    }
+
+}
 
 
 

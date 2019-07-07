@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     justify-content: space-between;
+    padding: 4px;
 }
 
 .wrap_small_contnt {
@@ -19,6 +20,8 @@
     margin: 1px;
     z-index: -1;
 }
+
+
 
 .photo_small_content {
 
@@ -54,6 +57,7 @@
     margin-top: 5px;
     font: 11px/10px sans-serif;
     color: #999999;
+    text-decoration: line-through;
 }
 
 .sale_img {
