@@ -29,6 +29,16 @@ const jsFiles = [
 	'./src/tamp_script/999_finish.js'	
 ]
 
+const htmlFiles = [
+  './src/tamp_html/1_start.html',
+  './src/tamp_html/2_work_from_languige.html',
+  './src/tamp_html/3_use_google_table.html',
+  './src/tamp_html/4_menu_navigation.html',
+  './src/tamp_html/5_overlay.html',
+  './src/tamp_html/998_jivo_site.html',
+  './src/tamp_html/999_finish.html' 
+]
+
 //Таск на стили CSS
 function styles() {
    //Шаблон для поиска файлов CSS

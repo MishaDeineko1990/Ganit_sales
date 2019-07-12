@@ -32,6 +32,7 @@
 }
 
 .sc_discription :hover {
+
     color: #ff7878;
     text-decoration: underline;
 }
@@ -45,6 +46,7 @@
     font: 12px/10px sans-serif;
     margin-top: 4px;
     max-width: 160px;
+    margin-left: 5px;
 }
 
 .sc_price {
