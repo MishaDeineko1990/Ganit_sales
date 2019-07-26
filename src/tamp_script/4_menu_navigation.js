@@ -6,6 +6,8 @@ var windows_width = $(window).width();
 
 
 
+	
+
 document.getElementById('position_button_menu').onclick = function () {                         //фенккція відкритт та закриття меню ()///
 	
 	if (indecator_opening===false)               //Якщо меню закрите то ми робимо це ()///
@@ -14,11 +16,12 @@ document.getElementById('position_button_menu').onclick = function () {         
 			$(".close_button_menu").css('display', 'none'); // показуэмо кнопку закриття меню()///
 			$(".open_menu_navigation").css("right", "-600px");
 
-			
+	
 
 			if(count_openes==0)
 					{
 						$(".menu_navigation").addClass("open_menu_navigation"); // додяэмо клас з цсс властивостями до елементу меню що його відкрити()///
+						$(".open_menu_navigation").css("right", "-600px");
 					}
 			indecator_opening = true; //записуємо що меню відкрите ()///
 
@@ -36,4 +39,30 @@ document.getElementById('position_button_menu').onclick = function () {         
 			}
 };
 
+function adaptat (){
+	if (windows_width<1126) {	
+		$(".button_menu").css("display", "block");            // Ховаэмо кнопку выдкриття меню ()///
+		$(".close_button_menu").css('display', 'none'); // показуэмо кнопку закриття меню()///
+		$(".menu_navigation").addClass("open_menu_navigation"); // додяэмо клас з цсс властивостями до елементу меню що його відкрити()///
+		$(".open_menu_navigation").css("right", "-600px");
+		count_openes++;
+		indecator_opening = true; 
+
+	}
+}
+
+adaptat();
+
+// function adaptat (){
+// 	if (windows_width<1126) {	
+// 		$(".button_menu").css("display", "block");            // Ховаэмо кнопку выдкриття меню ()///
+// 		$(".close_button_menu").css('display', 'none'); // показуэмо кнопку закриття меню()///
+// 		$(".menu_navigation").addClass("open_menu_navigation"); // додяэмо клас з цсс властивостями до елементу меню що його відкрити()///
+// 		$(".open_menu_navigation").css("right", "-600px");
+// 		count_openes++;
+// 		alert("function do");
+// 	}
+// }
+
+// adaptat();
 //menu navigation

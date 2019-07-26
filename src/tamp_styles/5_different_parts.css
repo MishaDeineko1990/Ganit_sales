@@ -8,11 +8,17 @@
 
 
 /*light galeery*/
-            .demo-gallery > ul {
+            .demo-gallery > ul {               
                 margin: 0 auto;
+                position: absolute;
+                z-index: -999;
             }
 
-			.demo-gallery:after{
+			.demo-gallery{
+                
+            }
+
+            .demo-gallery:after{
 				content: "";
 				display: table;
 				height: 1px;
@@ -21,8 +27,9 @@
             .demo-gallery > ul > li {
                 float: left;
                 margin-bottom: 15px;
-                margin-right: 20px;
+                margin-right: 0px;
                 width: 200px;
+                position: relative;
             }
             .demo-gallery > ul > li a {
                 border: 3px solid #FFF;
